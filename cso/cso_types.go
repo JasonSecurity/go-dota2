@@ -58,6 +58,12 @@ var csoTypeCtors = map[CSOType]func() proto.Message{
 	EconItem: func() proto.Message {
 		return &bgcm.CSOEconItem{}
 	},
+	EconGameAccountClient: func() proto.Message {
+		return &bgcm.CSOEconGameAccountClient{}
+	},
+	ItemTournamentPassport: func() proto.Message {
+		return &bgcm.CSOEconItemTournamentPassport{}
+	},
 	GameAccountClient: func() proto.Message {
 		return &gccm.CSODOTAGameAccountClient{}
 	},
