@@ -14,12 +14,12 @@ func TestNewSharedObjectRegistersSupportedTypes(t *testing.T) {
 		want interface{}
 	}{
 		{name: "econ item", typ: EconItem, want: &protocol.CSOEconItem{}},
-		{name: "econ game account client", typ: EconGameAccountClient, want: &bgcm.CSOEconGameAccountClient{}},
+		{name: "econ game account client", typ: EconGameAccountClient, want: &protocol.CSOEconGameAccountClient{}},
 		{name: "Dota game account client", typ: GameAccountClient, want: &protocol.CSODOTAGameAccountClient{}},
 		{name: "party", typ: Party, want: &protocol.CSODOTAParty{}},
-		{name: "lobby", typ: Lobby, want: &gcmm.CSODOTALobby{}},
-		{name: "item tournament passport", typ: ItemTournamentPassport, want: &bgcm.CSOEconItemTournamentPassport{}},
-		{name: "game account plus", typ: GameAccountPlus, want: &gccm.CSODOTAGameAccountPlus{}},
+		{name: "lobby", typ: Lobby, want: &protocol.CSODOTALobby{}},
+		{name: "item tournament passport", typ: ItemTournamentPassport, want: &protocol.CSOEconItemTournamentPassport{}},
+		{name: "game account plus", typ: GameAccountPlus, want: &protocol.CSODOTAGameAccountPlus{}},
 	}
 
 	for _, tt := range tests {
