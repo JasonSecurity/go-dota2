@@ -4,9 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	bgcm "github.com/paralin/go-dota2/protocol"
-	gccm "github.com/paralin/go-dota2/protocol"
-	gcmm "github.com/paralin/go-dota2/protocol"
+	protocol "github.com/paralin/go-dota2/protocol"
 )
 
 func TestNewSharedObjectRegistersSupportedTypes(t *testing.T) {
@@ -15,10 +13,10 @@ func TestNewSharedObjectRegistersSupportedTypes(t *testing.T) {
 		typ  CSOType
 		want interface{}
 	}{
-		{name: "econ item", typ: EconItem, want: &bgcm.CSOEconItem{}},
+		{name: "econ item", typ: EconItem, want: &protocol.CSOEconItem{}},
 		{name: "econ game account client", typ: EconGameAccountClient, want: &bgcm.CSOEconGameAccountClient{}},
-		{name: "Dota game account client", typ: GameAccountClient, want: &gccm.CSODOTAGameAccountClient{}},
-		{name: "party", typ: Party, want: &gcmm.CSODOTAParty{}},
+		{name: "Dota game account client", typ: GameAccountClient, want: &protocol.CSODOTAGameAccountClient{}},
+		{name: "party", typ: Party, want: &protocol.CSODOTAParty{}},
 		{name: "lobby", typ: Lobby, want: &gcmm.CSODOTALobby{}},
 		{name: "item tournament passport", typ: ItemTournamentPassport, want: &bgcm.CSOEconItemTournamentPassport{}},
 		{name: "game account plus", typ: GameAccountPlus, want: &gccm.CSODOTAGameAccountPlus{}},
